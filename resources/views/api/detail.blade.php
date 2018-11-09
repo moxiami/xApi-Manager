@@ -94,8 +94,8 @@
 							
 							<div class="line line-dashed b-b pull-in"></div>
 							<div class="m-l">
-                              <span class="col-lg-2 control-label">mock 地址：</span>
-                              <span class="col-lg-6 form-control-static">
+								<span class="col-lg-2 control-label">mock 地址：</span>
+								<span class="col-lg-6 form-control-static">
                               		<label>{{$data['detail']['mockUrl'] or ''}}</label>
 									<label class="m-l-md">
 										<i class="icon-question mockdes"></i>
@@ -104,7 +104,21 @@
 										<a href="{{$data['detail']['mockUrl'] or ''}}" target="_blank"  class="text-primary m-b-sm m-t-sm block">前往</a>
 									</label>
                               </span>
-                            </div>
+							</div>
+
+							<div class="line line-dashed b-b pull-in"></div>
+							<div class="m-l">
+								<span class="col-lg-2 control-label">统计 地址：</span>
+								<span class="col-lg-6 form-control-static">
+                              		<label>http://10.22.70.41:5669/app/kibana#/discover</label>
+									<label class="m-l-md">
+										<i class="icon-question mockdes"></i>
+									</label>
+									<label class="m-l-md">
+										<a href="http://10.22.70.41:5669/app/kibana#/discover/d0b7a600-aa8c-11e8-9940-e7989bc36144?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1d%2Fd,mode:quick,to:now-1d%2Fd))&_a=(columns:!(relatedApi,traceId,binaryAnnotations,duration,annotations),filters:!(),index:'temai_zipkin_span-*',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'!!(binaryAnnotations.key%20:%22error%22%20) %20%20AND%20 !!(_exists_:parentId)%20%20AND%20(relatedApi:%22{{$data['detail']['local']}}%22)')),sort:!(duration,desc))" target="_blank"  class="text-primary m-b-sm m-t-sm block">前往</a>
+									</label>
+                              </span>
+							</div>
 
 							<div class="line line-dashed b-b pull-in"></div>
 							
